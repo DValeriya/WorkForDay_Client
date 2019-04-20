@@ -128,7 +128,7 @@
             android:gravity="center"
             android:orientation="horizontal">
 
-            <material.ux.com.RobotoRegularTextView
+            <materialuiux.com.robotoRegularTextView
                 android:id="@+id/idsingUpText_Textview"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
@@ -136,7 +136,7 @@
                 android:text="@string/don_t_have_an_account"
                 android:textColor="@color/textcolor" />
 
-            <material.ux.com.RobotoBoldTextView
+            <materialuiux.com.robotoBoldTextView
                 android:id="@+id/idsingUpClick_Textview"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
