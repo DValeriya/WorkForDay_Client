@@ -10,6 +10,15 @@
     tools:context=".SignInActivity"
     tools:ignore="HardcodedText">
 
+    <ImageButton
+        android:id="@+id/id_close_sign_in"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_margin="23dp"
+        android:background="@null"
+        android:contentDescription="Don't have an account?"
+        app:srcCompat= "@drawable/ic_arrow"/>
 
     <!-- your  logo  -->
 
@@ -17,7 +26,7 @@
         android:id="@+id/id_logo_imageView"
         android:layout_width="match_parent"
         android:layout_height="177dp"
-        android:layout_marginTop="134dp"
+        android:layout_marginTop="110dp"
         android:contentDescription="For more visit www.materialuiux.com"
         android:cropToPadding="true"
         app:srcCompat="@drawable/logo" />
@@ -44,7 +53,7 @@
             android:textColorHint="@color/textcolor">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/id_Email_editText"
+                android:id="@+id/id_email_edit_text"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@null"
@@ -79,7 +88,7 @@
 
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/id_password_editText"
+                android:id="@+id/id_password_edit_text"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@null"
@@ -129,7 +138,7 @@
             android:orientation="horizontal">
 
             <matirialuiux.com.RobotoRegularTextView
-                android:id="@+id/idsingUpText_Textview"
+                android:id="@+id/id_sing_up_question"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:contentDescription="For more visit www.materialuiux.com"
@@ -137,7 +146,7 @@
                 android:textColor="@color/textcolor" />
 
             <matirialuiux.com.RobotoBoldTextView
-                android:id="@+id/idsingUpClick_Textview"
+                android:id="@+id/id_sing_up_text_view"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_marginLeft="6dp"

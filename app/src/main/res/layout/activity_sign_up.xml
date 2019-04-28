@@ -14,7 +14,7 @@
     <!-- Back ImageButton  -->
 
     <ImageButton
-        android:id="@+id/id_back_imageButton"
+        android:id="@+id/id_close_sign_up"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
@@ -30,7 +30,7 @@
         android:layout_width="match_parent"
         android:layout_height="177dp"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="134dp"
+        android:layout_marginTop="100dp"
         android:contentDescription="For more visit www.materialuiux.com"
         app:srcCompat="@drawable/logo" />
 
@@ -92,7 +92,7 @@
 
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/id_Email_editText"
+                android:id="@+id/id_email_edit_text"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@null"
@@ -129,7 +129,7 @@
 
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/id_password_editText"
+                android:id="@+id/id_password_edit_text"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@null"

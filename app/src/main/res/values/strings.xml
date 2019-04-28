@@ -22,4 +22,5 @@
     <string name="saved">saved</string>
     <string name="search">search</string>
     <string name="add">add</string>
+    <string name="title_activity_maps">Map</string>
 </resources>
