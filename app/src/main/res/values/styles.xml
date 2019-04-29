@@ -13,21 +13,7 @@
         <item name="android:textColor">@color/textcolor</item>
         <item name="android:navigationBarColor" tools:targetApi="lollipop">@color/colorPrimaryDark</item>
         <item name="android:statusBarColor" tools:targetApi="lollipop">@color/colorPrimaryDark</item>
+        <item name="android:windowTranslucentStatus" tools:targetApi="kitkat">true</item>
+        <item name="android:windowTranslucentNavigation" tools:targetApi="kitkat">true</item>
     </style>
-
-    <!--  DialogTheme. -->
-    <style name="DialogTheme" parent="Theme.AppCompat.Light.Dialog.Alert">
-        <!--item RadioButton or CheckBox color-->
-        <item name="colorControlNormal">@android:color/white</item>
-        <item name="colorControlActivated">@color/colorPrimary</item>
-        <!--item text color-->
-        <item name="textColorAlertDialogListItem">@android:color/white</item>
-        <!--buttons color-->
-        <item name="colorAccent">@color/black</item>
-        <!--title and message color-->
-        <item name="android:textColorPrimary">@android:color/white</item>
-        <!--dialog background-->
-        <item name="android:windowBackground">@color/colorPrimary</item>
-    </style>
-
 </resources>
