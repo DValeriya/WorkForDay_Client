@@ -6,115 +6,101 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background"
-    android:contentDescription="For more visit www.materialuiux.com"
     tools:context=".SignInActivity"
     tools:ignore="HardcodedText">
 
     <ImageButton
-        android:id="@+id/id_close_sign_in"
+        android:id="@+id/sing_in_close"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:layout_margin="23dp"
+        android:layout_marginStart="23dp"
+        android:layout_marginLeft="23dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="23dp"
         android:background="@null"
-        android:contentDescription="Don't have an account?"
-        app:srcCompat= "@drawable/ic_arrow"/>
+        app:srcCompat="@drawable/ic_arrow" />
 
-    <!-- your  logo  -->
 
     <ImageView
-        android:id="@+id/id_logo_imageView"
+        android:id="@+id/sing_in_logo"
         android:layout_width="match_parent"
         android:layout_height="177dp"
         android:layout_marginTop="110dp"
-        android:contentDescription="For more visit www.materialuiux.com"
         android:cropToPadding="true"
         app:srcCompat="@drawable/logo" />
 
-    <!-- Sign in Linear Layout  -->
 
     <LinearLayout
-        android:id="@+id/id_signin_lL"
         android:layout_width="match_parent"
         android:layout_height="266dp"
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="20dp"
-        android:contentDescription="For more visit www.materialuiux.com"
         android:orientation="vertical">
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/id_Email_textInputLayout"
+            android:id="@+id/sing_in_input_email"
             android:layout_width="match_parent"
             android:layout_height="58dp"
             android:layout_marginLeft="23dp"
             android:layout_marginRight="23dp"
             android:background="@null"
-            android:contentDescription="For more visit www.materialuiux.com"
             android:textColorHint="@color/textcolor">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/id_email_edit_text"
+                android:id="@+id/sign_in_email"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@null"
-                android:contentDescription="For more visit www.materialuiux.com"
                 android:drawableLeft="@drawable/ic_profile_icon"
                 android:drawablePadding="15dp"
                 android:hint="@string/email"
+                android:singleLine="true"
                 android:textColor="@color/textcolor"
                 android:textColorHint="@color/textcolor"
-                android:textSize="16sp"
-                tools:ignore="ContentDescription,RtlHardcoded" />
+                android:textSize="16sp" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
         <View
-            android:id="@+id/id_view_1"
+            android:id="@+id/view_1"
             android:layout_width="match_parent"
             android:layout_height="2dp"
-            android:background="@drawable/line_view"
-            android:contentDescription="For more visit www.materialuiux.com" />
+            android:background="@drawable/line_view" />
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/id_password_textInputLayout"
+            android:id="@+id/sing_in_input_password"
             android:layout_width="match_parent"
             android:layout_height="58dp"
             android:layout_marginLeft="23dp"
             android:layout_marginTop="5dp"
             android:layout_marginRight="23dp"
-            android:background="@null"
-            android:contentDescription="For more visit www.materialuiux.com"
             android:textColorHint="@color/textcolor">
 
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/id_password_edit_text"
+                android:id="@+id/sign_in_set_password"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@null"
-                android:contentDescription="For more visit www.materialuiux.com"
+                android:drawableStart="@drawable/ic_password_lock"
                 android:drawableLeft="@drawable/ic_password_lock"
                 android:drawablePadding="15dp"
                 android:hint="@string/password"
                 android:inputType="textPassword"
                 android:textColor="@color/textcolor"
                 android:textColorHint="@color/textcolor"
-                android:textSize="16sp"
-                tools:ignore="ContentDescription"
-                android:drawableStart="@drawable/ic_password_lock" />
+                android:textSize="16sp" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <View
-            android:id="@+id/id_view_2"
+            android:id="@+id/view_2"
             android:layout_width="match_parent"
             android:layout_height="2dp"
-            android:background="@drawable/line_view"
-            android:contentDescription="For more visit www.materialuiux.com" />
+            android:background="@drawable/line_view" />
 
-        <!--   Sign in Button  -->
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/id_signIn_Button"
+            android:id="@+id/sign_in_button"
             android:layout_width="match_parent"
             android:layout_height="61dp"
             android:layout_marginLeft="28dp"
@@ -122,38 +108,32 @@
             android:layout_marginRight="28dp"
             android:layout_marginBottom="30dp"
             android:background="@drawable/bg_rounded"
-            android:contentDescription="For more visit www.materialuiux.com"
             android:text="@string/sign_in"
             android:textAllCaps="false"
             android:textColor="@color/colorAccent" />
 
 
-        <!--   Sign Up Linear Layout   -->
         <LinearLayout
-            android:id="@+id/idsingUp_linearLayout"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:contentDescription="For more visit www.materialuiux.com"
             android:gravity="center"
             android:orientation="horizontal">
 
             <matirialuiux.com.RobotoRegularTextView
-                android:id="@+id/id_sing_up_question"
+                android:id="@+id/sing_up_question"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:contentDescription="For more visit www.materialuiux.com"
                 android:text="@string/don_t_have_an_account"
                 android:textColor="@color/textcolor" />
 
             <matirialuiux.com.RobotoBoldTextView
-                android:id="@+id/id_sing_up_text_view"
+                android:id="@+id/sing_up"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
+                android:layout_marginStart="6dp"
                 android:layout_marginLeft="6dp"
-                android:contentDescription="For more visit www.materialuiux.com"
                 android:text="@string/sign_up"
-                android:textColor="#FFF"
-                android:layout_marginStart="6dp" />
+                android:textColor="#FFF" />
         </LinearLayout>
     </LinearLayout>
 
