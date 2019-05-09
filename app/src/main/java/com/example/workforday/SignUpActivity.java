@@ -12,7 +12,7 @@ public class SignUpActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
 
-        ImageButton imageButton = findViewById(R.id.id_close_sign_up);
+        ImageButton imageButton = findViewById(R.id.sing_up_close);
 
         imageButton.setOnClickListener(v->{
                 finish();

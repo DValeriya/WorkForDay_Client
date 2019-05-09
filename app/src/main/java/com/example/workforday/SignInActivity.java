@@ -16,12 +16,12 @@ public class SignInActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_in);
 
-        TextView textView = findViewById(R.id.id_sing_up_text_view);
+        TextView textView = findViewById(R.id.sing_up);
 
-        EditText email = findViewById(R.id.id_email_edit_text);
-        EditText password = findViewById(R.id.id_password_edit_text);
+        EditText email = findViewById(R.id.sing_up_email);
+        EditText password = findViewById(R.id.sign_in_set_password);
 
-        ImageButton imageButton = findViewById(R.id.id_close_sign_in);
+        ImageButton imageButton = findViewById(R.id.sing_in_close);
 
         imageButton.setOnClickListener(v -> finish());
 

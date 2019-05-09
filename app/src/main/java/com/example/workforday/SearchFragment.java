@@ -1,11 +1,16 @@
 package com.example.workforday;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 
+import com.example.workforday.adapters.WorkApplicationListAdapter;
+import com.example.workforday.models.WorkApplication;
+import com.example.workforday.retrofit.WorkApplicationAPI;
+import com.example.workforday.retrofit.WorkApplicationREST;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapView;
@@ -16,11 +21,16 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
+import java.util.List;
+
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class SearchFragment extends Fragment implements OnMapReadyCallback {
     private GoogleMap mMap;
@@ -40,6 +50,24 @@ public class SearchFragment extends Fragment implements OnMapReadyCallback {
         LinearLayoutManager layoutManager = new LinearLayoutManager(getActivity(),
                 RecyclerView.VERTICAL, false);
         rv.setLayoutManager(layoutManager);
+
+        WorkApplicationREST rest = WorkApplicationAPI.getClient(getContext()).create(WorkApplicationREST.class);
+
+        rest.getWorkApplications(0, getResources().getInteger(R.integer.conut_of_results_for_page))
+                .enqueue(new Callback<List<WorkApplication>>() {
+            @Override
+            public void onResponse(Call<List<WorkApplication>> call, Response<List<WorkApplication>> response) {
+                rv.setAdapter(new WorkApplicationListAdapter(response.body(), getContext()));
+                Log.d("SEARCH_FRAGMENT", "onResponse: NAM PIZDA");
+            }
+
+            @Override
+            public void onFailure(Call<List<WorkApplication>> call, Throwable t) {
+                Log.e("SEARCH_FRAGMENT", "onFailure: ",  t );;
+            }
+        });
+
+
 
         return mView;
     }
