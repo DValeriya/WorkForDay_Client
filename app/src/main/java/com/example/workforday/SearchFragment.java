@@ -5,12 +5,11 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.LinearLayout;
 
 import com.example.workforday.adapters.WorkApplicationListAdapter;
 import com.example.workforday.models.WorkApplication;
-import com.example.workforday.retrofit.WorkApplicationAPI;
-import com.example.workforday.retrofit.WorkApplicationREST;
+import com.example.workforday.retrofit.WorkForDayAPI;
+import com.example.workforday.retrofit.WorkForDayREST;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapView;
@@ -22,6 +21,7 @@ import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import java.util.List;
+import java.util.Objects;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -51,7 +51,7 @@ public class SearchFragment extends Fragment implements OnMapReadyCallback {
                 RecyclerView.VERTICAL, false);
         rv.setLayoutManager(layoutManager);
 
-        WorkApplicationREST rest = WorkApplicationAPI.getClient(getContext()).create(WorkApplicationREST.class);
+        WorkForDayREST rest = WorkForDayAPI.getRest(getContext());
 
         rest.getWorkApplications(0, getResources().getInteger(R.integer.conut_of_results_for_page))
                 .enqueue(new Callback<List<WorkApplication>>() {
@@ -63,7 +63,7 @@ public class SearchFragment extends Fragment implements OnMapReadyCallback {
 
             @Override
             public void onFailure(Call<List<WorkApplication>> call, Throwable t) {
-                Log.e("SEARCH_FRAGMENT", "onFailure: ",  t );;
+                Log.e("SEARCH_FRAGMENT", "onFailure: ",  t);
             }
         });
 
@@ -88,7 +88,7 @@ public class SearchFragment extends Fragment implements OnMapReadyCallback {
     @Override
     public void onMapReady(GoogleMap googleMap) {
 
-        MapsInitializer.initialize(getContext());
+                                                                                                                                                                MapsInitializer.initialize(getContext());
         mMap = googleMap;
         LatLng position = new LatLng(46.469391,30.740883);
         mMap.setMapType(GoogleMap.MAP_TYPE_NORMAL);

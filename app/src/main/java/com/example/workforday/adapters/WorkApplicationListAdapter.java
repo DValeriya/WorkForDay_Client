@@ -1,7 +1,6 @@
 package com.example.workforday.adapters;
 
 import android.content.Context;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,8 +9,8 @@ import android.widget.TextView;
 
 import com.example.workforday.R;
 import com.example.workforday.models.WorkApplication;
-import com.example.workforday.retrofit.WorkApplicationAPI;
-import com.example.workforday.retrofit.WorkApplicationREST;
+import com.example.workforday.retrofit.WorkForDayAPI;
+import com.example.workforday.retrofit.WorkForDayREST;
 
 import java.util.List;
 
@@ -63,7 +62,7 @@ public class WorkApplicationListAdapter extends
         }
 
         if (position == (this.page + 1) * this.RESULT - 2){
-            WorkApplicationREST rest = WorkApplicationAPI.getClient(context).create(WorkApplicationREST.class);
+            WorkForDayREST rest = WorkForDayAPI.getRest(context);
             rest.getWorkApplications(page++, RESULT).enqueue(new Callback<List<WorkApplication>>() {
                 @Override
                 public void onResponse(Call<List<WorkApplication>> call, Response<List<WorkApplication>> response) {
