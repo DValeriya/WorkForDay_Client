@@ -11,7 +11,7 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <include layout="@layout/mechanic_toolbar" />
+        <include layout="@layout/work_application_toolbar" />
 
         <ScrollView
             android:layout_width="match_parent"

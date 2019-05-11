@@ -18,7 +18,8 @@ public class AddFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
-        mView = inflater.inflate(R.layout.fragment_add, null);
+        mView = inflater.inflate(R.layout.add_work_application_fragment, null);
+
         return mView;
     }
 

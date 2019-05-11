@@ -16,7 +16,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="30dp"
-        android:text="@string/advert"
+        android:text="@string/work_application"
         android:textColor="@color/color_accent"
         android:textSize="20dp" />
 

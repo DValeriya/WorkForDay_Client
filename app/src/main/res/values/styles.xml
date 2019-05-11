@@ -6,7 +6,5 @@
         <item name="android:textColor">@color/text_color</item>
         <item name="android:navigationBarColor" tools:targetApi="lollipop">@color/color_primary_dark</item>
         <item name="android:statusBarColor" tools:targetApi="lollipop">@color/color_primary_dark</item>
-        <!--<item name="android:windowTranslucentStatus" tools:targetApi="kitkat">true</item>
-        <item name="android:windowTranslucentNavigation" tools:targetApi="kitkat">true</item>-->
     </style>
 </resources>
