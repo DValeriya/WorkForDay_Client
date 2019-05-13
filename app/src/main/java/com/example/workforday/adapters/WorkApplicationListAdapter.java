@@ -55,7 +55,6 @@ public class WorkApplicationListAdapter extends
         holder.description.setText(list.get(position).getDescription());
        // holder.photo.setImageBitmap(list.get(position).getUser().getPhoto());
 
-        holder.gridLayout.removeAllViews();
         for (int i = 0; i < 6 && i < list.get(position).getHashTags().size(); i++){
             TextView textView = new TextView(context);
             textView.setText(list.get(position).getHashTags().get(i).getName());
@@ -97,7 +96,7 @@ public class WorkApplicationListAdapter extends
             photo = itemView.findViewById(R.id.profile_img);
             name = itemView.findViewById(R.id.name);
             description = itemView.findViewById(R.id.worker_description);
-            gridLayout = itemView.findViewById(R.id.worker_hashtags);
+            gridLayout = itemView.findViewById(R.id.worker_hastags);
         }
     }
 }
