@@ -23,7 +23,7 @@ public class WorkApplication {
     @Expose
     private String description;
 
-    @SerializedName("hashTags")
+    @SerializedName("hashtags")
     @Expose
     private List<HashTag> hashTags = null;
 

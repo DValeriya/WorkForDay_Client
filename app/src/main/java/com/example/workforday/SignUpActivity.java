@@ -5,6 +5,7 @@ import android.content.SharedPreferences;
 import android.net.Credentials;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
@@ -28,10 +29,10 @@ public class SignUpActivity extends AppCompatActivity {
         ImageButton imageButton = findViewById(R.id.sing_up_close);
 
         imageButton.setOnClickListener(v->{
-                finish();
+            finish();
         });
 
-        Button singUpButton = findViewById(R.id.sing_up_button);
+        View singUpButton = findViewById(R.id.sing_up_button);
         singUpButton.setOnClickListener((view)->{
             EditText fullName = findViewById(R.id.sing_up_full_name);
             EditText email = findViewById(R.id.sing_up_email);

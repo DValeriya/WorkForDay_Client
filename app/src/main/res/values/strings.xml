@@ -27,7 +27,13 @@
     <string name="work_application">Work Application</string>
     <string name="add_work_application">Add Work Apllication</string>
     <string name="add_hashtags">ADD HASHTAGS</string>
+    <string name="add_hashtag">Add Hashtag</string>
     <string name="description">DESCRIPTION</string>
     <string name="phone_numbers">PHONE NUMBERS</string>
+    <string name="add_phone">Add phone</string>
     <string name="enter_description">Enter description</string>
+    <string name="user_info">UserInfo</string>
+    <string name="user_info_name">name</string>
+    <string name="user_info_phones">phones</string>
+
 </resources>

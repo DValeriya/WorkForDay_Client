@@ -95,7 +95,7 @@
                 android:orientation="horizontal">
 
                 <androidx.gridlayout.widget.GridLayout
-                    android:id="@+id/worker_hastags"
+                    android:id="@+id/worker_hashtags"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
 

@@ -1,24 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <me.gujun.android.taggroup.TagGroup
-        android:id="@+id/tag_group"
-        style="@style/TagGroup"
-        android:layout_height="200px"
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/add_worker_application_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
-        app:atg_inputHint="add Hashtag"
-        app:atg_isAppendMode="true"
+        android:layout_marginBottom="8dp"
+        android:padding="10dp"
+        android:text="Add worker application"
+        android:textAllCaps="false"
+        android:textColor="@color/color_accent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/bg_rounded"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

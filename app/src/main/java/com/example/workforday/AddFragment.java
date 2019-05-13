@@ -12,14 +12,19 @@ import androidx.fragment.app.Fragment;
 
 public class AddFragment extends Fragment {
 
-    private View mView;
+    private View view;
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
-        mView = inflater.inflate(R.layout.fragment_add, null);
-        return mView;
+        view = inflater.inflate(R.layout.fragment_add, null);
+
+        View addWorkerApplicationButton = view.findViewById(R.id.add_worker_application_button);
+        addWorkerApplicationButton.setOnClickListener(v -> {
+            ((MainActivity) getActivity()).loadFragment(new AddWorkApplicationFragment());
+        });
+        return view;
     }
 
     @Override

@@ -1,5 +1,6 @@
 package com.example.workforday;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -20,6 +21,7 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
@@ -50,20 +52,24 @@ public class SearchFragment extends Fragment implements OnMapReadyCallback {
         LinearLayoutManager layoutManager = new LinearLayoutManager(getActivity(),
                 RecyclerView.VERTICAL, false);
         rv.setLayoutManager(layoutManager);
+        List<WorkApplication> list = new ArrayList<>();
+        rv.setAdapter(new WorkApplicationListAdapter(list, getContext()));
 
         WorkForDayREST rest = WorkForDayAPI.getRest(getContext());
-
         rest.getWorkApplications(0, getResources().getInteger(R.integer.conut_of_results_for_page))
                 .enqueue(new Callback<List<WorkApplication>>() {
             @Override
             public void onResponse(Call<List<WorkApplication>> call, Response<List<WorkApplication>> response) {
-                rv.setAdapter(new WorkApplicationListAdapter(response.body(), getContext()));
-                Log.d("SEARCH_FRAGMENT", "onResponse: NAM PIZDA");
+                if (response.body()!=null) {
+                    list.addAll(response.body());
+                    rv.getAdapter().notifyDataSetChanged();
+                }
+                Log.d("SEARCH_FRAGMENT", "getWorkApplications: onResponse: Successful");
             }
 
             @Override
             public void onFailure(Call<List<WorkApplication>> call, Throwable t) {
-                Log.e("SEARCH_FRAGMENT", "onFailure: ",  t);
+                Log.e("SEARCH_FRAGMENT", "getWorkApplications: onFailure: ",  t);
             }
         });
 
@@ -77,18 +83,19 @@ public class SearchFragment extends Fragment implements OnMapReadyCallback {
         super.onViewCreated(view, savedInstanceState);
 
         mMapView = mView.findViewById(R.id.map);
-        if(mMapView != null){
-            mMapView.onCreate(null);
-            mMapView.onResume();
-            mMapView.getMapAsync(this);
+        mMapView.onCreate(savedInstanceState);
+        mMapView.onResume();
 
-        }
+        try {
+            MapsInitializer.initialize(getActivity().getApplicationContext());
+        } catch (Exception e){e.printStackTrace();}
+        mMapView.getMapAsync(this);
+
     }
 
     @Override
     public void onMapReady(GoogleMap googleMap) {
 
-                                                                                                                                                                MapsInitializer.initialize(getContext());
         mMap = googleMap;
         LatLng position = new LatLng(46.469391,30.740883);
         mMap.setMapType(GoogleMap.MAP_TYPE_NORMAL);
@@ -113,4 +120,5 @@ public class SearchFragment extends Fragment implements OnMapReadyCallback {
         BottomNavigationView view = getActivity().findViewById(R.id.navigation);
         view.getMenu().getItem(0).setChecked(true);
     }
+
 }

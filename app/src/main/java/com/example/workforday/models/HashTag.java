@@ -14,9 +14,11 @@ public class HashTag {
     @Expose
     private String name;
 
-    @SerializedName("works")
-    @Expose
-    private List<Object> works = null;
+    public HashTag(String name) {
+        this.name = name;
+    }
+
+    public HashTag(){}
 
     public Integer getId() {
         return id;
@@ -32,14 +34,6 @@ public class HashTag {
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    public List<Object> getWorks() {
-        return works;
-    }
-
-    public void setWorks(List<Object> works) {
-        this.works = works;
     }
 
 }
