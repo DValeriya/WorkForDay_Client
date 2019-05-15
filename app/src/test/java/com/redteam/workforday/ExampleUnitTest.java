@@ -1,4 +1,4 @@
-package com.example.workforday;
+package com.redteam.workforday;
 
 import org.junit.Test;
 

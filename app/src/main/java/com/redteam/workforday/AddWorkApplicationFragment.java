@@ -1,4 +1,4 @@
-package com.example.workforday;
+package com.redteam.workforday;
 
 import android.content.Context;
 import android.content.SharedPreferences;
@@ -13,9 +13,9 @@ import android.widget.TextView;
 
 import androidx.fragment.app.Fragment;
 
-import com.example.workforday.models.HashTag;
-import com.example.workforday.models.WorkApplication;
-import com.example.workforday.retrofit.WorkForDayAPI;
+import com.redteam.workforday.models.HashTag;
+import com.redteam.workforday.models.WorkApplication;
+import com.redteam.workforday.retrofit.WorkForDayAPI;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import java.util.ArrayList;

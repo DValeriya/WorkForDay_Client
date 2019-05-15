@@ -1,19 +1,15 @@
-package com.example.workforday;
+package com.redteam.workforday;
 
-import android.content.Context;
 import android.content.SharedPreferences;
-import android.net.Credentials;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.workforday.models.User;
-import com.example.workforday.retrofit.WorkForDayAPI;
+import com.redteam.workforday.models.User;
+import com.redteam.workforday.retrofit.WorkForDayAPI;
 
 import retrofit2.Call;
 import retrofit2.Callback;

@@ -1,11 +1,8 @@
-package com.example.workforday.retrofit;
+package com.redteam.workforday.retrofit;
 
 import android.content.Context;
 
-import com.example.workforday.R;
-
-import java.net.CookieManager;
-import java.net.CookiePolicy;
+import com.redteam.workforday.R;
 
 import okhttp3.OkHttpClient;
 import retrofit2.Retrofit;

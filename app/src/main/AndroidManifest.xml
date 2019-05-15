@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.example.workforday">
+    package="com.redteam.workforday">
 
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.INTERNET" />
@@ -23,7 +23,7 @@
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
 
-        <activity android:name=".MainActivity"
+        <activity android:name="com.redteam.workforday.MainActivity"
             android:windowSoftInputMode="adjustPan">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -31,9 +31,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SignInActivity"
+        <activity android:name="com.redteam.workforday.SignInActivity"
             android:windowSoftInputMode="adjustPan"/>
-        <activity android:name=".SignUpActivity"
+        <activity android:name="com.redteam.workforday.SignUpActivity"
             android:windowSoftInputMode="adjustPan"/>
     </application>
 

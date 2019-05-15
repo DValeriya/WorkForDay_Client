@@ -1,6 +1,4 @@
-package com.example.workforday.models;
-
-import android.graphics.Bitmap;
+package com.redteam.workforday.models;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;

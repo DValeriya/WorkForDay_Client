@@ -1,4 +1,4 @@
-package com.example.workforday.adapters;
+package com.redteam.workforday.adapters;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -7,10 +7,10 @@ import android.view.ViewGroup;
 
 import android.widget.TextView;
 
-import com.example.workforday.R;
-import com.example.workforday.models.WorkApplication;
-import com.example.workforday.retrofit.WorkForDayAPI;
-import com.example.workforday.retrofit.WorkForDayREST;
+import com.redteam.workforday.R;
+import com.redteam.workforday.models.WorkApplication;
+import com.redteam.workforday.retrofit.WorkForDayAPI;
+import com.redteam.workforday.retrofit.WorkForDayREST;
 
 import java.util.List;
 

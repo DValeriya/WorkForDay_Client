@@ -1,7 +1,7 @@
-package com.example.workforday.retrofit;
+package com.redteam.workforday.retrofit;
 
-import com.example.workforday.models.User;
-import com.example.workforday.models.WorkApplication;
+import com.redteam.workforday.models.User;
+import com.redteam.workforday.models.WorkApplication;
 
 import java.util.List;
 

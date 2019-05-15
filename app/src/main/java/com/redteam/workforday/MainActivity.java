@@ -1,9 +1,7 @@
-package com.example.workforday;
+package com.redteam.workforday;
 
-import android.content.ClipData;
 import android.content.Intent;
 import android.os.Bundle;
-import android.widget.Button;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 

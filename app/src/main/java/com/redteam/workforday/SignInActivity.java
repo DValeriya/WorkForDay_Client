@@ -1,4 +1,4 @@
-package com.example.workforday;
+package com.redteam.workforday;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -11,8 +11,8 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.workforday.models.User;
-import com.example.workforday.retrofit.WorkForDayAPI;
+import com.redteam.workforday.models.User;
+import com.redteam.workforday.retrofit.WorkForDayAPI;
 
 import okhttp3.Credentials;
 import retrofit2.Call;

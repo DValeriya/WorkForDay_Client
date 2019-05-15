@@ -24,7 +24,7 @@
     <ImageView
         android:id="@+id/sing_in_logo"
         android:layout_width="match_parent"
-        android:layout_height="177dp"
+        android:layout_height="150dp"
         android:layout_marginTop="110dp"
         android:cropToPadding="true"
         app:srcCompat="@drawable/logo" />

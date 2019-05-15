@@ -1,16 +1,15 @@
-package com.example.workforday;
+package com.redteam.workforday;
 
-import android.content.Context;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.workforday.adapters.WorkApplicationListAdapter;
-import com.example.workforday.models.WorkApplication;
-import com.example.workforday.retrofit.WorkForDayAPI;
-import com.example.workforday.retrofit.WorkForDayREST;
+import com.redteam.workforday.adapters.WorkApplicationListAdapter;
+import com.redteam.workforday.models.WorkApplication;
+import com.redteam.workforday.retrofit.WorkForDayAPI;
+import com.redteam.workforday.retrofit.WorkForDayREST;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapView;
@@ -23,7 +22,6 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Objects;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;

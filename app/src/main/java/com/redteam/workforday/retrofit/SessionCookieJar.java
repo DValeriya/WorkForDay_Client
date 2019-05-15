@@ -1,6 +1,5 @@
-package com.example.workforday.retrofit;
+package com.redteam.workforday.retrofit;
 
-import java.net.CookieManager;
 import java.util.Collections;
 import java.util.List;
 
