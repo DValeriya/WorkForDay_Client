@@ -1,8 +1,11 @@
 package com.redteam.workforday;
 
+import android.content.Context;
 import android.content.SharedPreferences;
+import android.net.Credentials;
 import android.os.Bundle;
-import android.view.View;
+import android.util.Log;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 
@@ -25,10 +28,10 @@ public class SignUpActivity extends AppCompatActivity {
         ImageButton imageButton = findViewById(R.id.sing_up_close);
 
         imageButton.setOnClickListener(v->{
-            finish();
+                finish();
         });
 
-        View singUpButton = findViewById(R.id.sing_up_button);
+        Button singUpButton = findViewById(R.id.sing_up_button);
         singUpButton.setOnClickListener((view)->{
             EditText fullName = findViewById(R.id.sing_up_full_name);
             EditText email = findViewById(R.id.sing_up_email);

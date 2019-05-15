@@ -9,8 +9,8 @@
 
     <ScrollView
         android:id="@+id/scrollView2"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -29,11 +29,10 @@
                 android:src="@drawable/img1"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                />
+                app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/add_worker_application_name"
+                android:id="@+id/textView5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
@@ -56,31 +55,29 @@
                 android:textSize="16sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/add_worker_application_name" />
+                app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
-            <me.gujun.android.taggroup.TagGroup
-                android:id="@+id/add_worker_application_phones"
-                android:layout_width="match_parent"
+            <EditText
+                android:id="@+id/editText2"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="32dp"
                 android:layout_marginLeft="32dp"
                 android:layout_marginTop="24dp"
                 android:layout_marginEnd="16dp"
                 android:layout_marginRight="16dp"
-                app:atg_backgroundColor="#00000000"
-                app:atg_borderColor="@color/text_color"
-                app:atg_inputHint="@string/add_phone"
-                app:atg_inputHintColor="@color/text_color"
-                app:atg_inputTextColor="@color/text_color"
-                app:atg_isAppendMode="true"
-                app:atg_textColor="@color/text_color"
-                app:atg_textSize="14sp"
+                android:background="@null"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="some phone"
+                android:textColor="@color/text_color"
+                android:textSize="14sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
             <View
-                android:id="@+id/worker_description"
+                android:id="@+id/add_view3"
                 android:layout_width="match_parent"
                 android:layout_height="2dp"
                 android:layout_marginStart="16dp"
@@ -91,7 +88,7 @@
                 android:background="@drawable/line_view"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/add_worker_application_phones" />
+                app:layout_constraintTop_toBottomOf="@+id/editText2" />
 
             <TextView
                 android:id="@+id/textView2"
@@ -107,10 +104,10 @@
                 app:fontFamily="@font/open_sans"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/worker_description" />
+                app:layout_constraintTop_toBottomOf="@+id/add_view3" />
 
             <EditText
-                android:id="@+id/add_worker_application_description"
+                android:id="@+id/editText"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="32dp"
@@ -122,8 +119,7 @@
                 android:ems="10"
                 android:inputType="text"
                 android:singleLine="false"
-                android:hint="@string/enter_description"
-                android:textColorHint="@color/text_color"
+                android:text="@string/enter_description"
                 android:textColor="@color/text_color"
                 android:textSize="14sp"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -142,7 +138,7 @@
                 android:background="@drawable/line_view"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/add_worker_application_description" />
+                app:layout_constraintTop_toBottomOf="@+id/editText" />
 
             <TextView
                 android:id="@+id/textView3"
@@ -157,10 +153,10 @@
                 android:textSize="16sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/add_view4" />
+                app:layout_constraintTop_toBottomOf="@+id/editText" />
 
             <me.gujun.android.taggroup.TagGroup
-                android:id="@+id/add_worker_application_hashtags"
+                android:id="@+id/add_wapp_tags"
                 style="@style/TagGroup"
                 android:layout_height="0dp"
                 android:layout_marginStart="32dp"
@@ -170,7 +166,6 @@
                 android:layout_marginRight="16dp"
                 app:atg_backgroundColor="#00000000"
                 app:atg_borderColor="@color/text_color"
-                app:atg_inputHint="@string/add_hashtag"
                 app:atg_inputHintColor="@color/text_color"
                 app:atg_inputTextColor="@color/text_color"
                 app:atg_isAppendMode="true"
@@ -199,7 +194,7 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/add_worker_application_hashtags" />
+                app:layout_constraintTop_toBottomOf="@+id/add_wapp_tags" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>

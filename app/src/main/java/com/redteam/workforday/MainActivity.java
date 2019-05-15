@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    public boolean loadFragment(Fragment fragment) {
+    private boolean loadFragment(Fragment fragment) {
         if (fragment != null) {
             getSupportFragmentManager()
                     .beginTransaction()

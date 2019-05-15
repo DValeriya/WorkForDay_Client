@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!--application url-->
-    <string name="work_for_day_rest_url">https://workforday.herokuapp.com</string>
+    <string name="work_for_day_rest_url">http://workforday.herokuapp.com</string>
     <integer name="conut_of_results_for_page">20</integer>
 </resources>
