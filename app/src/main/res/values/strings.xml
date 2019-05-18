@@ -35,5 +35,10 @@
     <string name="user_info">UserInfo</string>
     <string name="user_info_name">name</string>
     <string name="user_info_phones">phones</string>
+    <string name="user_info_email">email</string>
+    <string name="budget">BUDGET</string>
+    <string name="enter_budget">Enter budget</string>
+    <string name="name">NAME</string>
+    <string name="title">TITLE</string>
 
 </resources>

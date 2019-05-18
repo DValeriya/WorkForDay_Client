@@ -1,6 +1,7 @@
 package com.example.workforday.retrofit;
 
 import com.example.workforday.models.User;
+import com.example.workforday.models.Work;
 import com.example.workforday.models.WorkApplication;
 
 import java.util.List;
@@ -28,4 +29,7 @@ public interface WorkForDayREST {
 
     @GET("user/get")
     Call<User> singIn(@Header("Authorization") String authorization);
+
+    @POST("work/add")
+    Call<Void> addWork(@Body Work work);
 }

@@ -8,16 +8,18 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.example.workforday.R;
+import com.example.workforday.models.HashTag;
 import com.example.workforday.models.WorkApplication;
 import com.example.workforday.retrofit.WorkForDayAPI;
 import com.example.workforday.retrofit.WorkForDayREST;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import androidx.annotation.NonNull;
-import androidx.gridlayout.widget.GridLayout;
 import androidx.recyclerview.widget.RecyclerView;
 import de.hdodenhof.circleimageview.CircleImageView;
+import me.gujun.android.taggroup.TagGroup;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -54,21 +56,24 @@ public class WorkApplicationListAdapter extends
         holder.name.setText(list.get(position).getUser().getName());
         holder.description.setText(list.get(position).getDescription());
        // holder.photo.setImageBitmap(list.get(position).getUser().getPhoto());
-
-        holder.gridLayout.removeAllViews();
-        for (int i = 0; i < 6 && i < list.get(position).getHashTags().size(); i++){
-            TextView textView = new TextView(context);
-            textView.setText(list.get(position).getHashTags().get(i).getName());
-            holder.gridLayout.addView(textView);
+        List<String> hashtags = new ArrayList<>();
+        for (HashTag hashtag : list.get(position).getHashTags()) {
+            hashtags.add(hashtag.getName());
         }
+        holder.hashtags.setTags(hashtags);
+
 
         if (position == (this.page + 1) * this.RESULT - 2){
             WorkForDayREST rest = WorkForDayAPI.getRest(context);
             rest.getWorkApplications(page++, RESULT).enqueue(new Callback<List<WorkApplication>>() {
                 @Override
                 public void onResponse(Call<List<WorkApplication>> call, Response<List<WorkApplication>> response) {
-                    list.addAll(response.body());
-                    notifyDataSetChanged();
+                    if (response.isSuccessful()) {
+                        if (response.body() != null) {
+                            list.addAll(response.body());
+                            notifyDataSetChanged();
+                        }
+                    }
                 }
 
                 @Override
@@ -86,18 +91,18 @@ public class WorkApplicationListAdapter extends
 
     public static class WorkApplicationViewHolder extends RecyclerView.ViewHolder{
 
-        public CircleImageView photo;
-        public TextView name;
-        public TextView description;
-        public GridLayout gridLayout;
+        CircleImageView photo;
+        TextView name;
+        TextView description;
+        TagGroup hashtags;
 
-        public WorkApplicationViewHolder(@NonNull View itemView) {
+        WorkApplicationViewHolder(@NonNull View itemView) {
             super(itemView);
 
             photo = itemView.findViewById(R.id.profile_img);
             name = itemView.findViewById(R.id.name);
-            description = itemView.findViewById(R.id.worker_description);
-            gridLayout = itemView.findViewById(R.id.worker_hashtags);
+            description = itemView.findViewById(R.id.add_work_line1);
+            hashtags = itemView.findViewById(R.id.worker_hashtags);
         }
     }
 }

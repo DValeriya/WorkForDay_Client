@@ -1,12 +1,8 @@
 package com.example.workforday;
 
-import android.content.Context;
-import android.content.SharedPreferences;
-import android.net.Credentials;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 
@@ -20,6 +16,8 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 public class SignUpActivity extends AppCompatActivity {
+
+    private static String TAG = "SingUpActivity";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,10 +48,8 @@ public class SignUpActivity extends AppCompatActivity {
         WorkForDayAPI.getRest(getApplicationContext()).saveNewUser(user).enqueue(new Callback<User>() {
             @Override
             public void onResponse(Call<User> call, Response<User> response) {
-                SharedPreferences.Editor editor = getSharedPreferences("User", 0).edit();
-                editor.putInt("UserID", response.body().getId());
-                editor.commit();
-                editor.apply();
+                Log.d(TAG, "onResponse: " + response.code());
+                if (response.isSuccessful()) finish();
             }
 
             @Override

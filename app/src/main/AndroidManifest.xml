@@ -14,7 +14,8 @@
         android:supportsRtl="true"
         android:usesCleartextTraffic="true"
         android:theme="@style/AppTheme"
-        tools:ignore="GoogleAppIndexingWarning">
+        tools:ignore="GoogleAppIndexingWarning"
+        >
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
@@ -24,6 +25,7 @@
             android:resource="@array/preloaded_fonts" />
 
         <activity android:name=".MainActivity"
+            android:screenOrientation="sensorPortrait"
             android:windowSoftInputMode="adjustPan">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -31,9 +33,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SignInActivity"
+        <activity
+            android:screenOrientation="sensorPortrait"
+            android:name=".SignInActivity"
             android:windowSoftInputMode="adjustPan"/>
-        <activity android:name=".SignUpActivity"
+        <activity
+            android:screenOrientation="sensorPortrait"
+            android:name=".SignUpActivity"
             android:windowSoftInputMode="adjustPan"/>
     </application>
 

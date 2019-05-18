@@ -17,7 +17,7 @@ public abstract class WorkForDayAPI {
     public static WorkForDayREST getRest(Context context){
         if (rest == null){
             Retrofit retrofit = new Retrofit.Builder()
-                    .client(new OkHttpClient()
+                    .client(new     OkHttpClient()
                             .newBuilder()
                             .cookieJar(new SessionCookieJar())
                             .build())

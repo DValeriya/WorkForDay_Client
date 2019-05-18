@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background"
     android:orientation="vertical">
 
     <ScrollView
-        android:id="@+id/scrollView2"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -31,12 +30,13 @@
                 app:layout_constraintTop_toTopOf="parent"
                 />
 
-            <TextView
+            <EditText
                 android:id="@+id/add_work_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
-                android:text="NAME"
+                android:hint="@string/title"
+                android:textColorHint="@color/text_color"
                 android:textSize="16sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -57,6 +57,37 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/add_work_title" />
 
+            <TextView
+                android:id="@+id/add_work_text_view_budget"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="32dp"
+                android:text="@string/budget"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/add_work_line1" />
+
+            <EditText
+                android:id="@+id/add_work_budget"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="24dp"
+                android:background="@null"
+                android:ems="10"
+                android:hint="@string/enter_budget"
+                android:inputType="number"
+                android:singleLine="true"
+                android:textColor="@color/text_color"
+                android:textColorHint="@color/text_color"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/add_work_text_view_budget"
+                />
+
             <me.gujun.android.taggroup.TagGroup
                 android:id="@+id/add_work_phones"
                 android:layout_width="match_parent"
@@ -76,7 +107,8 @@
                 app:atg_textSize="14sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/add_work_text_phone_numbers" />
+                app:layout_constraintTop_toBottomOf="@+id/add_work_text_phone_numbers"
+                />
 
             <View
                 android:id="@+id/add_work_line1"
@@ -92,6 +124,21 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/add_work_phones" />
 
+            <View
+                android:id="@+id/add_work_line2"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:background="@drawable/line_view"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/add_work_budget" />
+
             <TextView
                 android:id="@+id/add_work_text_description"
                 android:layout_width="0dp"
@@ -105,8 +152,11 @@
                 android:textSize="16sp"
                 app:fontFamily="@font/open_sans"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/add_work_line1" />
+                app:layout_constraintTop_toBottomOf="@+id/add_work_line2" />
+
+
 
             <EditText
                 android:id="@+id/add_work_description"

@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -48,14 +49,18 @@ public class SignInActivity extends AppCompatActivity {
              WorkForDayAPI.getRest(this).singIn(Credentials.basic(email, password)).enqueue(new Callback<User>() {
                  @Override
                  public void onResponse(Call<User> call, Response<User> response) {
-                     Log.d(TAG, "onResponse: response code: " + response.code());
-                     SharedPreferences userInfo = getSharedPreferences(getString(R.string.user_info), MODE_PRIVATE);
-                     SharedPreferences.Editor editor = userInfo.edit();
-                     editor.putString(getString(R.string.user_info_name), response.body().getName());
-                     editor.putString(getString(R.string.user_info_phones), response.body().getPhoneNumbers());
-                     editor.putString("email", response.body().getEmail());
-                     editor.apply();
-                     finish();
+                     if (response.isSuccessful()) {
+                         SharedPreferences userInfo = getSharedPreferences(getString(R.string.user_info), MODE_PRIVATE);
+                         SharedPreferences.Editor editor = userInfo.edit();
+                         editor.putString(getString(R.string.user_info_name), response.body().getName());
+                         editor.putString(getString(R.string.user_info_phones), response.body().getPhoneNumbers());
+                         editor.putString(getString(R.string.user_info_email), response.body().getEmail());
+                         editor.apply();
+                         finish();
+                     }else{
+                         Log.d(TAG, "onResponse: " + response.code());
+                         Toast.makeText(getApplicationContext(), "Unauthorized", Toast.LENGTH_LONG).show();
+                     }
                  }
 
                  @Override

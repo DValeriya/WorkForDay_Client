@@ -6,6 +6,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import com.example.workforday.adapters.WorkApplicationListAdapter;
 import com.example.workforday.models.WorkApplication;
@@ -24,6 +25,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
+import java.util.concurrent.TimeoutException;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -69,7 +71,9 @@ public class SearchFragment extends Fragment implements OnMapReadyCallback {
 
             @Override
             public void onFailure(Call<List<WorkApplication>> call, Throwable t) {
+
                 Log.e("SEARCH_FRAGMENT", "getWorkApplications: onFailure: ",  t);
+                Toast.makeText(getContext(), "Can't connect to server", Toast.LENGTH_SHORT).show();
             }
         });
 
