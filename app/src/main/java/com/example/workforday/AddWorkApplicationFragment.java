@@ -38,20 +38,20 @@ public class AddWorkApplicationFragment extends Fragment {
 
         SharedPreferences userInfo = getActivity().getSharedPreferences(getString(R.string.user_info), Context.MODE_PRIVATE);
 
-        TextView nameTextView = view.findViewById(R.id.add_work_title);
+        TextView nameTextView = view.findViewById(R.id.add_worker_application_name);
         nameTextView.setText(userInfo.getString(getString(R.string.user_info_name), "NAME"));
 
-        TagGroup phonesTagGroup = view.findViewById(R.id.add_work_phones);
+        TagGroup phonesTagGroup = view.findViewById(R.id.add_worker_application_phones);
         try {
             phonesTagGroup.setTags(userInfo.getString(getString(R.string.user_info_phones), null).split(";"));
         } catch (NullPointerException ignored){}
 
-        View addButton = this.view.findViewById(R.id.add_work_add_button);
+        View addButton = this.view.findViewById(R.id.add_worker_application_add_button);
         addButton.setOnClickListener(v -> {
             addButton.setClickable(false);
-            TagGroup phones = this.view.findViewById(R.id.add_work_phones);
-            EditText description =  this.view.findViewById(R.id.add_work_description);
-            TagGroup hashtags = this.view.findViewById(R.id.add_work_hashtags);
+            TagGroup phones = this.view.findViewById(R.id.add_worker_application_phones);
+            EditText description =  this.view.findViewById(R.id.add_worker_application_description);
+            TagGroup hashtags = this.view.findViewById(R.id.add_worker_application_hashtags);
 
             String phoneNumbers = TextUtils.join(";", phones.getTags());
 

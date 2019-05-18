@@ -21,7 +21,7 @@
             android:orientation="vertical">
 
             <de.hdodenhof.circleimageview.CircleImageView
-                android:id="@+id/add_work_circle_image"
+                android:id="@+id/add_worker_application_circle_image"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:layout_marginTop="50dp"
@@ -32,7 +32,7 @@
                 />
 
             <TextView
-                android:id="@+id/add_work_title"
+                android:id="@+id/add_worker_application_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
@@ -40,10 +40,10 @@
                 android:textSize="16sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/add_work_circle_image" />
+                app:layout_constraintTop_toBottomOf="@+id/add_worker_application_circle_image" />
 
             <TextView
-                android:id="@+id/add_work_text_phone_numbers"
+                android:id="@+id/add_worker_application_text_phone_numbers"
                 android:layout_width="0dp"
                 android:layout_height="19dp"
                 android:layout_marginStart="32dp"
@@ -55,10 +55,10 @@
                 android:textSize="16sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/add_work_title" />
+                app:layout_constraintTop_toBottomOf="@+id/add_worker_application_name" />
 
             <me.gujun.android.taggroup.TagGroup
-                android:id="@+id/add_work_phones"
+                android:id="@+id/add_worker_application_phones"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="32dp"
@@ -76,10 +76,10 @@
                 app:atg_textSize="14sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/add_work_text_phone_numbers" />
+                app:layout_constraintTop_toBottomOf="@+id/add_worker_application_text_phone_numbers" />
 
             <View
-                android:id="@+id/add_work_line1"
+                android:id="@+id/add_worker_application_line1"
                 android:layout_width="match_parent"
                 android:layout_height="2dp"
                 android:layout_marginStart="16dp"
@@ -90,10 +90,10 @@
                 android:background="@drawable/line_view"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/add_work_phones" />
+                app:layout_constraintTop_toBottomOf="@+id/add_worker_application_phones" />
 
             <TextView
-                android:id="@+id/add_work_text_description"
+                android:id="@+id/add_worker_application_text_description"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="32dp"
@@ -106,10 +106,10 @@
                 app:fontFamily="@font/open_sans"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/add_work_line1" />
+                app:layout_constraintTop_toBottomOf="@+id/add_worker_application_line1" />
 
             <EditText
-                android:id="@+id/add_work_description"
+                android:id="@+id/add_worker_application_description"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="32dp"
@@ -127,10 +127,10 @@
                 android:textSize="14sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/add_work_text_description" />
+                app:layout_constraintTop_toBottomOf="@+id/add_worker_application_text_description" />
 
             <View
-                android:id="@+id/add_work_line3"
+                android:id="@+id/add_worker_application_line3"
                 android:layout_width="match_parent"
                 android:layout_height="2dp"
                 android:layout_marginStart="16dp"
@@ -141,10 +141,10 @@
                 android:background="@drawable/line_view"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/add_work_description" />
+                app:layout_constraintTop_toBottomOf="@+id/add_worker_application_description" />
 
             <TextView
-                android:id="@+id/add_work_text_hashtags"
+                android:id="@+id/add_worker_application_text_hashtags"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="32dp"
@@ -156,10 +156,10 @@
                 android:textSize="16sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/add_work_line3" />
+                app:layout_constraintTop_toBottomOf="@+id/add_worker_application_line3" />
 
             <me.gujun.android.taggroup.TagGroup
-                android:id="@+id/add_work_hashtags"
+                android:id="@+id/add_worker_application_hashtags"
                 style="@style/TagGroup"
                 android:layout_height="0dp"
                 android:layout_marginStart="32dp"
@@ -177,11 +177,11 @@
                 app:atg_textSize="14sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/add_work_text_hashtags" />
+                app:layout_constraintTop_toBottomOf="@+id/add_worker_application_text_hashtags" />
 
 
             <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/add_work_add_button"
+                android:id="@+id/add_worker_application_add_button"
                 android:layout_width="match_parent"
                 android:layout_height="61dp"
                 android:layout_marginStart="32dp"
@@ -198,7 +198,7 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/add_work_hashtags" />
+                app:layout_constraintTop_toBottomOf="@+id/add_worker_application_hashtags" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
